@@ -21,6 +21,7 @@ function GoogleAdPreview() {
     const [advertiserRating, setAdvertiserRating] = useState(false)
     const [structuredSnippets, setstructuredSnippets] = useState({ header: 'Barnds' })
     const [snippetsItems, setSnippetsItems] = useState(['item 1', 'item 2', 'itwm 3'])
+    const [headerItem, setHeaderItem] = useState("")
 
 
     const [isSiteLinkHead, setSiteLinkHead] = useState(false)
@@ -155,7 +156,6 @@ function GoogleAdPreview() {
                 return response.json();
             })
             .then(data => {
-                console.log(data, "nihal")
                 if (data.id) {
                     // toast.success('Ads Saved');
                     setresponseTrue(true)
@@ -216,6 +216,19 @@ function GoogleAdPreview() {
         setresponseTrue(false)
         setResponseId("")
     }
+    useEffect(() => {
+        fetch('https://www.postmagnetmedia.com/')
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const htmlDoc = parser.parseFromString(data, 'text/html');
+                const headerElement = htmlDoc.querySelector('.dmHeaderContainer');
+                setHeaderItem(headerElement.outerHTML)
+                console.log(headerElement.outerHTML);
+            })
+            .catch(error => console.error(error));
+
+    }, [])
 
     return (
         <>
@@ -229,6 +242,9 @@ function GoogleAdPreview() {
                         $(".ds--input").toggleClass("active");
                     });
                 }}
+            />
+            <div
+                dangerouslySetInnerHTML={{ __html: headerItem }}
             />
             <section className="form--area">
                 <div className="container">
