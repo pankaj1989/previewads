@@ -241,7 +241,7 @@ function GoogleAdPreview() {
                     $(document).on("click", ".tab--item--inner > label", function () {
                         $(".ds--input").toggleClass("active");
                     });
-                }}
+                }}   
             />
             <div
                 dangerouslySetInnerHTML={{ __html: headerItem }}
