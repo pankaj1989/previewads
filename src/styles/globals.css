@@ -282,6 +282,9 @@ html, body {
   margin: 0px;
   font-family: arial, sans-serif;
 }
+.searchresult .spm--headline {
+  line-height: 24px;
+}
 .searchresult h2.fm--headline span:not(:first-child)::before {
   content: "|";
   position: relative;

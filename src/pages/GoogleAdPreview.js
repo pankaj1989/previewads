@@ -22,6 +22,7 @@ function GoogleAdPreview() {
     const [structuredSnippets, setstructuredSnippets] = useState({ header: 'Barnds' })
     const [snippetsItems, setSnippetsItems] = useState(['item 1', 'item 2', 'itwm 3'])
     const [headerItem, setHeaderItem] = useState("")
+    const [searchInput, setSearchInput] = useState("")
 
 
     const [isSiteLinkHead, setSiteLinkHead] = useState(false)
@@ -241,7 +242,7 @@ function GoogleAdPreview() {
                     $(document).on("click", ".tab--item--inner > label", function () {
                         $(".ds--input").toggleClass("active");
                     });
-                }}   
+                }}
             />
             <div
                 dangerouslySetInnerHTML={{ __html: headerItem }}
@@ -618,7 +619,7 @@ function GoogleAdPreview() {
                                             <Image id="searchbarimage" src="/googlelogo_color_120x44dp.png" alt="Google logo" width={120} height={44} />
                                             {/* <img id="searchbarimage" src={require("./image/googlelogo_color_120x44dp.png")} alt='' /> */}
                                             <div id="searchbar" type="text">
-                                                <input id="searchbartext" type="text" placeholder="Search Terms Here" />
+                                                <input id="searchbartext" type="text"  value={searchInput} onChange={(e) => setSearchInput(e.target.value)} placeholder="Search Terms Here" />
                                                 <button id="searchbarbutton">
                                                     <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                                         <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
@@ -632,7 +633,7 @@ function GoogleAdPreview() {
                                         <div className="searchresult">
                                             <span className="call--add mt-1"><a className="ad--heading"><span className="adtag--ad">Ad&nbsp;·</span>{finalUrl}<Image className='down--arrow' width={10} height={6} src="/down-arrow.png" alt="" /> </a> {isCallAsset && <span className="p--title call--asset ms-1">{phoneNumber}</span>}</span>
                                             {(headlineForm[0] || headlineForm[1] || headlineForm[2]) &&
-                                                <h2 className="fm--headline mt-2"><span>{headlineForm[0]}</span><span>{headlineForm[1]}</span><span>{headlineForm[2]}</span></h2>
+                                                <h2 className="fm--headline mt-2"><span className='spm--headline'>{headlineForm[0]}</span><span className='spm--headline'>{headlineForm[1]}</span><span className='spm--headline'>{headlineForm[2]}</span></h2>
                                             }
                                             {advertiserRating &&
                                                 <div className="advertiger--rating">
@@ -765,7 +766,7 @@ function GoogleAdPreview() {
                                                         </div>
                                                         <div className="mobile--topbar">
                                                             <div className="input--group">
-                                                                <input id="mobile-search-input" value="Search Term here..." className="form-control input" type="text" />
+                                                                <input id="mobile-search-input" placeholder="Search Terms here..." value={searchInput} onChange={(e) => setSearchInput(e.target.value)} className="form-control input" type="text" />
                                                                 <div className="btn-search">
                                                                     <Image id="searchbarimage" src="/Search.svg" alt="Google logo" width={30} height={32} />
                                                                 </div>
