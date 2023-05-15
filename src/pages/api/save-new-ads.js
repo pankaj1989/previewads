@@ -21,6 +21,7 @@ export default async function handler(req, res) {
             phone_number: req.body.phone_number,
             address: req.body.address,
             message: req.body.message,
+            searchText: req.body.searchText,
             advertiser_rating: req.body.advertiser_rating,
             structured_snippets: req.body.structured_snippets,
             generatedID: adId,
@@ -34,7 +35,6 @@ export default async function handler(req, res) {
             isMessageAsset: req.body.isMessageAsset,
             isSnippetsAsset: req.body.isSnippetsAsset,
         });
-        console.log(req.body.final_url)
         await ad.save();
         res.status(201).json({ id: adId });
     } catch (err) {

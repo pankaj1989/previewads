@@ -48,6 +48,7 @@ const adSchema = new Schema({
     address: String,
     message: String,
     advertiser_rating: Boolean,
+    searchText:{ type: String, default: null },
     structured_snippets: structuredSnippetsSchema,
     generatedID: { type: String, unique: true },
     isSiteLinkHead: { type: Boolean, default: false },

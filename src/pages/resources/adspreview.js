@@ -76,6 +76,7 @@ function GoogleAddPreviewDetails() {
                     phone_number,
                     address,
                     message,
+                    searchText,
                     advertiser_rating,
                     price_asset,
                     structured_snippets,
@@ -114,7 +115,7 @@ function GoogleAddPreviewDetails() {
                 setAddress(address);
                 setMessage(message);
                 setAdvertiserRating(advertiser_rating);
-
+                setSearchInput(searchText)
                 setSiteLinkHead(isSiteLinkHead)
                 setSiteLinkDesc(isSiteLinkDesc)
                 setCallout(isCallout)
@@ -212,6 +213,7 @@ function GoogleAddPreviewDetails() {
             price_asset: { ...priceAsset, priceItems },
             phone_number: phoneNumber,
             address: address,
+            searchText:searchInput,
             message: message,
             advertiser_rating: advertiserRating,
             structured_snippets: { ...structuredSnippets, snippetsItems },

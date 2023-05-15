@@ -128,6 +128,7 @@ function GoogleAdPreview() {
             promotions_asset: promotionsAsset,
             price_asset: { ...priceAsset, priceItems },
             phone_number: phoneNumber,
+            searchText:searchInput,
             address: address,
             message: message,
             advertiser_rating: advertiserRating,
