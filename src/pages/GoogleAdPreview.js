@@ -913,7 +913,7 @@ function GoogleAdPreview() {
             <section className='form--footer' >
                 <div className='form--footer--container'>
                     <div className='form--footer--container--wrapper'>
-                        <p>Hope you've enjoyed utilizing our incredible Google Ads Preview Tool. If you're looking for further assistance with your Google Ads campaigns, then look no further. Post Magnet Media, is here to help you achieve your business goals with advertising on Google. Don't hesitate to reach out to us and schedule a discovery call.</p>
+                        <p>Hope you&rsquo;ve enjoyed utilizing our incredible Google Ads Preview Tool. If you&rsquo;re looking for further assistance with your Google Ads campaigns, then look no further. Post Magnet Media, is here to help you achieve your business goals with advertising on Google. Don&rsquo;t hesitate to reach out to us and schedule a discovery call.</p>
                         <a href='http://www.postmagnetmedia.com'>www.postmagnetmedia.com</a>
                         <div className='btn--contact'><a href='#'>CONTACT</a></div>
                     </div>
