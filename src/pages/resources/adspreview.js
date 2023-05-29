@@ -682,7 +682,8 @@ function GoogleAddPreviewDetails() {
                                 <div className="desktop-sec">
                                     <div id="header">
                                         <div id="topbar">
-                                            <Image id="searchbarimage" src="/googlelogo_color_120x44dp.png" alt="Google logo" width={120} height={44} />
+                                            <h2 className='gl--haading'><span>Your Google Ad Preview</span></h2>
+                                            {/* <Image id="searchbarimage" src="/googlelogo_color_120x44dp.png" alt="Google logo" width={120} height={44} /> */}
                                             {/* <img id="searchbarimage" src={require("./image/googlelogo_color_120x44dp.png")} alt='' /> */}
                                             <div id="searchbar" type="text">
                                                 <input id="searchbartext" type="text" value={searchInput} onChange={(e) => setSearchInput(e.target.value)} placeholder="Search Terms Here" />
@@ -826,10 +827,11 @@ function GoogleAddPreviewDetails() {
                                             <div className="mobile-inner">
                                                 <div id="header">
                                                     <div className="search-result">
-                                                        <div className="g--img">
+                                                    <h2 className='gl--mb--haading'><span>Your Google Ad Preview</span></h2>
+                                                        {/* <div className="g--img">
                                                             <Image id="searchbarimage" src="/googlelogo_color_120x44dp.png" alt="Google logo" width={100} height={35} />
-                                                            {/* <img id="searchbarimage" src={require("./image/googlelogo_color_120x44dp.png")} /> */}
-                                                        </div>
+                                                            <img id="searchbarimage" src={require("./image/googlelogo_color_120x44dp.png")} />
+                                                        </div> */}
                                                         <div className="mobile--topbar">
                                                             <div className="input--group">
                                                                 <input id="mobile-search-input" placeholder="Search Terms here..." value={searchInput} onChange={(e) => setSearchInput(e.target.value)} className="form-control input" type="text" />

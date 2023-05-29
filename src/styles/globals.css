@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 :root {
   --border--color:#ced4da;
 }
+
+
 a {
   text-decoration: none;
 }
@@ -138,14 +141,17 @@ input:focus, select:focus, textarea:focus {
   position: relative;
 
 }
+.desktop-sec > #header > #topbar {
+  flex-direction: column;
+}
 #topbar::before {
   content: "";
   position: absolute;
   bottom: -7px;
   height: 1px;
   background-color: #ebebeb;
-  width: calc(100% + 140px);
-  left: -140px;
+  width: calc(100%);
+  left: 0;
   z-index: 1;
 }
 
@@ -286,6 +292,18 @@ html, body {
 }
 .searchresult .spm--headline {
   line-height: 24px;
+}
+.gl--haading {
+  font-size: clamp(22px, 2.5vw, 28px);
+  color: #006b6b;
+  font-family: 'DM Serif Display', serif;
+}
+.gl--mb--haading {
+  font-size: clamp(18px, 2vw, 22px);
+  text-align: center;
+  padding: 15px;
+  color: #006b6b;
+  font-family: 'DM Serif Display', serif;
 }
 .searchresult h2.fm--headline span:not(:first-child)::before {
   content: "|";
