@@ -52,9 +52,9 @@ input:focus, select:focus, textarea:focus {
   font-size: 10px;
 }
 .input-group-text {
-  background-color: #85b5fd;
-  border: 1px solid #6ca2f3;
-  color: #fff;
+  background-color: #85b5fd !important;
+  border: 1px solid #6ca2f3 !important;
+  color: #fff !important; 
 }
 .alert-success {
   background-color: #dff0d8 ;
@@ -128,7 +128,7 @@ input:focus, select:focus, textarea:focus {
   display: flex;
 }
 .input-group-text, .form-control, .form-check-label , .tab--content strong {
-  font-size: 14px;
+  font-size: 14px !important;
 }
 
 
@@ -922,9 +922,9 @@ color: #333333 !important;
 .form--footer--container .form--footer--container--wrapper .btn--contact {
   margin-top: 25px;
 }
-@media (max-width:1100px) {
+@media (max-width:1200px) {
   .headline--box textarea {
-    min-height: 77px;
+    min-height: 77px !important;
   }
   .pr--45 {
     padding-right: 30px;
@@ -961,18 +961,22 @@ color: #333333 !important;
     top: 81px;
   }
   .input-group-text, .form-control, .form-check-label, .tab--content strong {
-    font-size: 12px;
+    font-size: 12px !important;
+    padding: 0.375rem 0.4rem !important;
 }
 .input-group-text {
-  padding: 5px 7px;
+  padding: 5px 7px !important;
 }
 .checkbox--form--group {
   padding: 0 10px;
 }
 }
 @media (max-width:767px) {
+  .headline--box {
+    padding: 10px;
+  }
   .headline--box textarea {
-    min-height: 70px;
+    min-height: 70px !important;
 }
   .checkbox--form--group {
       padding: 0 0px;
@@ -1030,7 +1034,7 @@ color: #333333 !important;
     top: 72px;
 }
 .input-group-text {
-  padding: 5px 5px;
+  padding: 5px 5px !important;
 }
 }
 
